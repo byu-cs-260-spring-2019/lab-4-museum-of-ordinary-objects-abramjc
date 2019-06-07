@@ -28,7 +28,8 @@ app.post('/api/items/', async (req, res) => {
         let item = {
             id: numRecords + 1,
             title: req.body.title,
-            path: req.body.path
+            path: req.body.path,
+            description: req.body.description,
         };
 
         console.log("item: ", item);
@@ -72,6 +73,7 @@ app.put('/api/items/:id', async (req, res) => {
 
         itemToEdit.update({
             title: req.body.title,
+            description: req.body.description,
         });
 
         res.sendStatus(200);

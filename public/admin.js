@@ -2,6 +2,7 @@ var app = new Vue({
   el: '#admin',
   data: {
     title: "",
+    description: "",
     selected:  "",
     addItem: null,
     photos: [
@@ -31,7 +32,8 @@ var app = new Vue({
       try {
         let result = await axios.post('/api/items', {
           title: this.title,
-          path: this.selected.path
+          path: this.selected.path,
+          description: this.description,
         });
         this.addItem = result.data;
         
@@ -71,8 +73,14 @@ var app = new Vue({
 
     async editItem(item) {
         try {
+            let description = "";
+            if (this.findItem.description !== undefined) {
+                description = this.findItem.description;
+            }
+
             let respone = await axios.put("/api/items/" + item.id, {
                 title: this.findItem.title,
+                description: description,
             });
             this.findItem = null;
             this.getItems();

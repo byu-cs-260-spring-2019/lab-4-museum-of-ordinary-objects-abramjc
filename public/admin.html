@@ -22,11 +22,15 @@
             <option disabled value="">Please select one to add</option>
             <option v-for="photo in photos" :value="photo">{{ photo.name }}</option>
           </select>
+          <br><br> 
+          <textarea placeholder="Description" v-model="description"></textarea>
+          <br>
             <button @click="addNewItem">Add Item</button>
         </div>
       <div class="upload" v-if="addItem">
         <h2>{{addItem.title}}</h2>
         <img :src="addItem.path" />
+        <p>{{ addItem.description }}</p>
       </div>
     </div>
     
@@ -46,12 +50,19 @@
         <input v-model="findItem.title">
         <p></p>
         <img :src="findItem.path" />
+        <p></p>
+        <textarea v-model="findItem.description"></textarea>
       </div>
       <div class="actions" v-if="findItem">
         <button @click="deleteItem(findItem)">Delete</button>
         <button @click="editItem(findItem)">Edit</button>
       </div>
     </div>
+
+  <div class="footer">
+    <a href="/index.html">Home</a>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
   <script src="/admin.js"></script>
