@@ -1,41 +1,46 @@
-[debug] [2019-06-06T19:48:07.862Z] ----------------------------------------------------------------------
-[debug] [2019-06-06T19:48:07.864Z] Command:       /usr/bin/node /usr/bin/firebase serve
-[debug] [2019-06-06T19:48:07.865Z] CLI Version:   6.7.2
-[debug] [2019-06-06T19:48:07.865Z] Platform:      linux
-[debug] [2019-06-06T19:48:07.865Z] Node Version:  v10.15.3
-[debug] [2019-06-06T19:48:07.865Z] Time:          Thu Jun 06 2019 13:48:07 GMT-0600 (Mountain Daylight Time)
-[debug] [2019-06-06T19:48:07.865Z] ----------------------------------------------------------------------
+[debug] [2019-06-07T18:32:02.048Z] ----------------------------------------------------------------------
+[debug] [2019-06-07T18:32:02.051Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2019-06-07T18:32:02.051Z] CLI Version:   6.7.2
+[debug] [2019-06-07T18:32:02.051Z] Platform:      linux
+[debug] [2019-06-07T18:32:02.051Z] Node Version:  v10.15.3
+[debug] [2019-06-07T18:32:02.051Z] Time:          Fri Jun 07 2019 12:32:02 GMT-0600 (Mountain Daylight Time)
+[debug] [2019-06-07T18:32:02.051Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2019-06-06T19:48:07.873Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-06-06T19:48:07.873Z] > authorizing via signed-in user
-[debug] [2019-06-06T19:48:07.873Z] [iam] checking project practice-39e49 for permissions ["firebase.projects.get"]
-[debug] [2019-06-06T19:48:07.875Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/practice-39e49:testIamPermissions  
+[debug] [2019-06-07T18:32:02.059Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-07T18:32:02.059Z] > authorizing via signed-in user
+[debug] [2019-06-07T18:32:02.059Z] [iam] checking project practice-39e49 for permissions ["firebase.projects.get"]
+[debug] [2019-06-07T18:32:02.061Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/practice-39e49:testIamPermissions  
 
-[debug] [2019-06-06T19:48:08.300Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-06T19:48:08.307Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/practice-39e49  
+[debug] [2019-06-07T18:32:02.954Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-07T18:32:02.957Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/practice-39e49  
  
-[debug] [2019-06-06T19:48:08.701Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-07T18:32:03.562Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/home/abramjc/Documents/cs260/labs/lab4'...
 [info] 
 [info] i  functions: Preparing to emulate functions.
-[debug] [2019-06-06T19:48:09.287Z] Fetching environment
-[debug] [2019-06-06T19:48:09.291Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/781522949137:getServerAppConfig  
+[debug] [2019-06-07T18:32:04.019Z] Fetching environment
+[debug] [2019-06-07T18:32:04.028Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/781522949137:getServerAppConfig  
  
-[debug] [2019-06-06T19:48:09.292Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/781522949137/clients/_:getWebAppConfig  
+[debug] [2019-06-07T18:32:04.030Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/781522949137/clients/_:getWebAppConfig  
  
-[debug] [2019-06-06T19:48:09.540Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-07T18:32:04.286Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-07T18:32:04.287Z] Starting @google-cloud/functions-emulator
+[debug] [2019-06-07T18:32:04.322Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
-[debug] [2019-06-06T19:48:09.822Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-06T19:48:09.823Z] Starting @google-cloud/functions-emulator
-[debug] [2019-06-06T19:48:10.877Z] Parsing function triggers
+[debug] [2019-06-07T18:32:05.368Z] Parsing function triggers
 [info] [hosting] Rewriting /api/items to http://localhost:5001/practice-39e49/us-central1/app for local Function app
 [info] ✔  functions: app: http://localhost:5001/practice-39e49/us-central1/app
+[info] [hosting] Rewriting /api/items/3 to http://localhost:5001/practice-39e49/us-central1/app for local Function app
 [info] [hosting] Rewriting /api/items to http://localhost:5001/practice-39e49/us-central1/app for local Function app
 [info] [hosting] Rewriting /api/items to http://localhost:5001/practice-39e49/us-central1/app for local Function app
 [info] [hosting] Rewriting /api/items to http://localhost:5001/practice-39e49/us-central1/app for local Function app
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/practice-39e49/us-central1/app for local Function app
 [info] [hosting] Rewriting /api/items to http://localhost:5001/practice-39e49/us-central1/app for local Function app
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/practice-39e49/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/items to http://localhost:5001/practice-39e49/us-central1/app for local Function app
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/practice-39e49/us-central1/app for local Function app
 [info] [hosting] Rewriting /api/items to http://localhost:5001/practice-39e49/us-central1/app for local Function app
 [info] [hosting] Rewriting /favicon.ico to http://localhost:5001/practice-39e49/us-central1/app for local Function app
 [info] [hosting] Rewriting /api/items to http://localhost:5001/practice-39e49/us-central1/app for local Function app

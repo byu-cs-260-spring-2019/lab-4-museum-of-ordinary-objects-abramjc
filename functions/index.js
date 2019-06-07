@@ -12,7 +12,7 @@ const app = express();
 var db = firebase.firestore();
 var itemsRef = db.collection('items');
 
-app.get('/api/items', async (req, res) => {
+app.get('/api/items/', async (req, res) => {
     try{
         let querySnapshot = await itemsRef.get();
         res.send(querySnapshot.docs.map(doc => doc.data()));
@@ -21,7 +21,7 @@ app.get('/api/items', async (req, res) => {
     }
 });
 
-app.post('/api/items', async (req, res) => {
+app.post('/api/items/', async (req, res) => {
     try {
         let querySnapshot = await itemsRef.get();
         let numRecords = querySnapshot.docs.length;
@@ -38,6 +38,48 @@ app.post('/api/items', async (req, res) => {
         console.log(error);
         res.sendStatus(500);
       }
+});
+
+app.delete('/api/items/:id', async (req, res) => {
+    try {
+        let itemToDelete = itemsRef.doc(req.params.id.toString());
+
+        let item = await itemToDelete.get();
+
+        if (!item.exists) {
+            res.status(404).send("Sorry, that item does not exist");
+            return;
+        }
+
+        itemToDelete.delete();
+        res.sendStatus(200);
+        return;
+    }
+    catch(error) {
+        console.log(error);
+    }   
+});
+
+app.put('/api/items/:id', async (req, res) => {
+    try {
+        let itemToEdit = itemsRef.doc(req.params.id.toString());
+
+        item = await itemToEdit.get();
+
+        if (!item.exists) {
+            res.status(404).send("Sorry, that item does not exist");
+        }
+
+        itemToEdit.update({
+            title: req.body.title,
+        });
+
+        res.sendStatus(200);
+        return;
+    }
+    catch (error) {
+        console.log(error);
+    }
 });
 
 
