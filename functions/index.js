@@ -12,7 +12,7 @@ const app = express();
 var db = firebase.firestore();
 var itemsRef = db.collection('items');
 
-app.get('/api/items/', async (req, res) => {
+app.get('/api/items/', async function(req, res) {
     try{
         let querySnapshot = await itemsRef.get();
         res.send(querySnapshot.docs.map(doc => doc.data()));
@@ -21,7 +21,7 @@ app.get('/api/items/', async (req, res) => {
     }
 });
 
-app.post('/api/items/', async (req, res) => {
+app.post('/api/items/', async function(req, res) {
     try {
         let querySnapshot = await itemsRef.get();
         let numRecords = querySnapshot.docs.length;
@@ -41,7 +41,7 @@ app.post('/api/items/', async (req, res) => {
       }
 });
 
-app.delete('/api/items/:id', async (req, res) => {
+app.delete('/api/items/:id', async function(req, res)  {
     try {
         let itemToDelete = itemsRef.doc(req.params.id.toString());
 
@@ -61,7 +61,7 @@ app.delete('/api/items/:id', async (req, res) => {
     }   
 });
 
-app.put('/api/items/:id', async (req, res) => {
+app.put('/api/items/:id', async function(req, res)  {
     try {
         let itemToEdit = itemsRef.doc(req.params.id.toString());
 

@@ -14,6 +14,10 @@ var app = new Vue({
       {name: 'scissors', id: 6, path: 'images/scissors.jpg'},
       {name: 'shovel', id: 7, path: 'images/shovel.jpg'},
       {name: 'slinky', id: 8, path: 'images/slinky.jpg'},
+      {name: 'anvil', id: 9, path: 'images/anvil.jpg'},
+      {name: 'neon', id: 8, path: 'images/neon.jpg'},
+      {name: 'gears', id: 8, path: 'images/gears.jpg'},
+      {name: 'donuts', id: 8, path: 'images/donuts.jpg'},
     ],
 
     findTitle: "",
